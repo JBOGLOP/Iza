@@ -63,26 +63,30 @@ body{
   padding:0 24px;
 }
 
-/* === HERO con gradiente de amanecer === */
+/* === HERO con foto de balcón y degradado de amanecer === */
 .hero{
-  padding:90px 24px 70px;
+  padding:100px 24px 80px;
   text-align:center;
   position:relative;
-  background:linear-gradient(180deg,
-    rgba(168,196,216,0.35) 0%,
-    rgba(216,207,226,0.25) 35%,
-    rgba(244,212,188,0.20) 65%,
-    transparent 100%);
+  overflow:hidden;
+  background:
+    linear-gradient(180deg,
+      rgba(58,49,66,0.55) 0%,
+      rgba(216,207,226,0.40) 40%,
+      rgba(244,212,188,0.45) 75%,
+      rgba(251,246,236,0.85) 100%),
+    url('img/balcon.jpg') center/cover no-repeat;
+  color:var(--crema);
 }
 
 .hero::before{
   content:"";
   position:absolute;
-  top:40px;left:50%;
+  top:50px;left:50%;
   transform:translateX(-50%);
   width:80px;height:1px;
-  background:var(--acento);
-  opacity:0.6;
+  background:var(--crema);
+  opacity:0.7;
 }
 
 .hero .saludo{
@@ -92,23 +96,25 @@ body{
   font-size:1.05rem;
   letter-spacing:0.22em;
   text-transform:uppercase;
-  color:var(--acento);
+  color:var(--crema);
   margin-bottom:22px;
+  text-shadow:0 1px 8px rgba(0,0,0,0.35);
 }
 
 .hero h1{
   font-family:'Cormorant Garamond',serif;
   font-weight:500;
-  font-size:clamp(2.6rem,7vw,4.6rem);
+  font-size:clamp(2.6rem,7vw,4.8rem);
   line-height:1.05;
   letter-spacing:-0.01em;
-  color:var(--tinta);
+  color:var(--crema-clara);
   margin-bottom:24px;
+  text-shadow:0 2px 16px rgba(0,0,0,0.45);
 }
 
 .hero h1 em{
   font-style:italic;
-  color:var(--acento);
+  color:var(--durazno-claro);
   font-weight:400;
 }
 
@@ -116,19 +122,23 @@ body{
   font-family:'Fraunces',serif;
   font-style:italic;
   font-size:1.15rem;
-  color:var(--tinta-suave);
+  color:var(--crema-clara);
   max-width:520px;
-  margin:0 auto 36px;
+  margin:0 auto 40px;
+  text-shadow:0 1px 10px rgba(0,0,0,0.4);
 }
 
 .hero .info-casa{
   display:inline-block;
   padding:22px 36px;
-  background:var(--crema-clara);
-  border:1px solid var(--linea);
+  background:rgba(251,246,236,0.95);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.6);
   border-radius:3px;
-  box-shadow:0 1px 0 rgba(201,122,82,0.06), 0 12px 32px -16px rgba(58,49,66,0.18);
+  box-shadow:0 12px 40px -8px rgba(0,0,0,0.35);
   position:relative;
+  color:var(--tinta);
 }
 
 .hero .info-casa::before,
@@ -136,8 +146,8 @@ body{
   content:"";
   position:absolute;
   width:24px;height:1px;
-  background:var(--acento);
-  opacity:0.4;
+  background:var(--crema);
+  opacity:0.7;
   top:50%;
 }
 .hero .info-casa::before{left:-32px}
@@ -633,6 +643,39 @@ details[open] .summary-flecha{
   margin-top:28px;
 }
 
+.cierre .firma-personal{
+  margin-top:36px;
+  padding-top:24px;
+  position:relative;
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:0.95rem;
+  color:var(--tinta-suave);
+  letter-spacing:0.04em;
+  line-height:1.8;
+}
+
+.cierre .firma-personal::before{
+  content:"";
+  position:absolute;
+  top:0; left:50%;
+  transform:translateX(-50%);
+  width:40px; height:1px;
+  background:var(--acento);
+  opacity:0.5;
+}
+
+.cierre .firma-personal span{
+  display:inline-block;
+  margin-top:4px;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:1.7rem;
+  font-weight:500;
+  color:var(--tinta);
+  letter-spacing:0.02em;
+}
+
 footer{
   text-align:center;
   padding:30px 24px 50px;
@@ -643,10 +686,51 @@ footer{
   background:var(--crema);
 }
 
+/* === BANNER DE IMAGEN ENTRE SECCIONES === */
+.banner-foto{
+  position:relative;
+  width:100%;
+  height:280px;
+  margin:30px 0 36px;
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow:0 8px 28px -12px rgba(58,49,66,0.25);
+}
+
+.banner-foto img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.banner-foto::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,
+    transparent 0%,
+    transparent 50%,
+    rgba(58,49,66,0.35) 100%);
+  pointer-events:none;
+}
+
+.banner-foto .pie{
+  position:absolute;
+  bottom:18px; left:24px;
+  color:var(--crema-clara);
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:1rem;
+  letter-spacing:0.04em;
+  text-shadow:0 1px 8px rgba(0,0,0,0.5);
+  z-index:1;
+}
+
 /* === RESPONSIVE === */
 @media (max-width:640px){
   body{font-size:16px}
-  .hero{padding:60px 16px 50px}
+  .hero{padding:70px 16px 60px}
   .contenedor{padding:0 16px}
   .seccion-titulo{font-size:1.75rem}
   summary{padding:16px 18px}
@@ -659,6 +743,8 @@ footer{
   .cierre{padding:50px 20px}
   .hero .info-casa::before, .hero .info-casa::after{display:none}
   .alerta-alarma{padding:18px}
+  .banner-foto{height:200px; margin:24px 0 28px}
+  .banner-foto .pie{bottom:14px; left:18px; font-size:0.9rem}
 }
 
 /* === ANIMACIÓN ENTRADA === */
@@ -711,9 +797,48 @@ footer{
     </div>
   </section>
 
+  <!-- BANNER FACHADA Y PARQUEADERO -->
+  <figure class="banner-foto">
+    <img src="img/parqueadero.jpg" alt="Vista de la casa y el parqueadero compartido" loading="lazy">
+    <figcaption class="pie">Nuestra casa · Iza, Boyacá</figcaption>
+  </figure>
+
+  <!-- LLAVES Y PARQUEADERO -->
+  <section class="seccion">
+    <h2 class="seccion-titulo"><span class="num">II.</span>Antes de llegar</h2>
+
+    <div class="alerta-alarma" style="background:linear-gradient(135deg, var(--lavanda-suave), var(--crema-rosada)); border-color:var(--lavanda);">
+      <div class="icono-alarma" style="border-color:var(--lavanda); color:var(--tinta);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="8" cy="15" r="4"/>
+          <path d="M10.85 12.15L19 4M18 5l2 2M15 8l2 2"/>
+        </svg>
+      </div>
+      <div class="contenido">
+        <h3>Las llaves — Vicky López</h3>
+        <p>Las llaves del apartamento las tiene <strong>Vicky López</strong>. Por favor <strong>contáctenla antes de llegar a Sogamoso</strong> para coordinar la entrega.</p>
+      </div>
+    </div>
+
+    <div class="alerta-alarma" style="background:linear-gradient(135deg, var(--cielo-suave), var(--crema-clara)); border-color:var(--cielo);">
+      <div class="icono-alarma" style="border-color:var(--cielo); color:var(--tinta);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="3" y="11" width="18" height="10" rx="1"/>
+          <path d="M7 11V8a5 5 0 0110 0v3"/>
+          <circle cx="9" cy="16" r="0.5" fill="currentColor"/>
+          <circle cx="15" cy="16" r="0.5" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="contenido">
+        <h3>Parqueadero</h3>
+        <p>El parqueadero se <strong>comparte con el vecino</strong>, <strong>William Forero</strong>. Por favor sean considerados al estacionar para que ambos puedan usar el espacio cómodamente.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ALARMA — destacada -->
   <section class="seccion">
-    <h2 class="seccion-titulo"><span class="num">II.</span>Alarma</h2>
+    <h2 class="seccion-titulo"><span class="num">III.</span>Alarma</h2>
     <div class="alerta-alarma">
       <div class="icono-alarma">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
@@ -728,9 +853,15 @@ footer{
     </div>
   </section>
 
+  <!-- BANNER FACHADA CALLE -->
+  <figure class="banner-foto">
+    <img src="img/fachada.jpg" alt="Fachada de la casa desde la Carrera 6" loading="lazy">
+    <figcaption class="pie">Carrera 6 · Iza, Boyacá</figcaption>
+  </figure>
+
   <!-- SOBRE LA CASA -->
   <section class="seccion">
-    <h2 class="seccion-titulo"><span class="num">III.</span>Sobre la casa</h2>
+    <h2 class="seccion-titulo"><span class="num">IV.</span>Sobre la casa</h2>
 
     <div class="tarjeta">
       <details>
@@ -867,7 +998,7 @@ footer{
 
   <!-- RECOMENDACIONES IZA -->
   <section class="seccion">
-    <h2 class="seccion-titulo"><span class="num">IV.</span>Para disfrutar Iza</h2>
+    <h2 class="seccion-titulo"><span class="num">V.</span>Para disfrutar Iza</h2>
     <p style="color:var(--tinta-suave); margin-bottom:6px; font-style:italic;">Nuestros lugares favoritos en el pueblo y alrededores.</p>
 
     <!-- DESAYUNOS -->
@@ -986,12 +1117,32 @@ footer{
       </div>
     </div>
 
+    <!-- COPAS -->
+    <div class="subseccion">
+      <div class="subseccion-titulo">Para una copa</div>
+
+      <div class="recomendacion">
+        <div class="marker">G</div>
+        <div class="info">
+          <span class="nombre">La Ventanita del Vino · El Divino</span>
+          <div class="descripcion">Un lugar con mucha historia y buen vino, a una cuadra de la casa. Perfecto para una velada tranquila. Calle 5 #6-03.</div>
+          <div class="meta">
+            <span>★ 3.7 · pocas reseñas</span>
+            <span class="alerta">⚠ Solo abre viernes a domingo · Vie–Sáb 11 AM – 10 PM · Dom 11 AM – 9 PM</span>
+          </div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://maps.app.goo.gl/CRopmBTt8neaPUkw5" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- TERMALES -->
     <div class="subseccion">
       <div class="subseccion-titulo">Plan de termales</div>
 
       <div class="recomendacion">
-        <div class="marker">G</div>
+        <div class="marker">H</div>
         <div class="info">
           <span class="nombre">Piscinas Erika</span>
           <div class="descripcion">Complejo termal en Iza. Muy recomendado para relajarse y disfrutar el clima boyacense.</div>
@@ -1006,7 +1157,7 @@ footer{
       </div>
 
       <div class="recomendacion">
-        <div class="marker">H</div>
+        <div class="marker">I</div>
         <div class="info">
           <span class="nombre">El Batán</span>
           <div class="descripcion">Termales en Cuítiva, muy cerca de Iza. Aguas tibias relajantes en un entorno tranquilo. También tienen turcos.</div>
@@ -1026,7 +1177,7 @@ footer{
       <div class="subseccion-titulo">Artesanías y tejidos</div>
 
       <div class="recomendacion">
-        <div class="marker">I</div>
+        <div class="marker">J</div>
         <div class="info">
           <span class="nombre">Rueca Izana</span>
           <div class="descripcion">Pregunten por <strong>Ruth</strong>. Tejidos tradicionales hechos a mano, perfectos para llevar recuerdos lindos de Boyacá.</div>
@@ -1037,7 +1188,7 @@ footer{
       </div>
 
       <div class="recomendacion">
-        <div class="marker">J</div>
+        <div class="marker">K</div>
         <div class="info">
           <span class="nombre">Tejidos Rebancá</span>
           <div class="descripcion">Diseño, tradición y mucha creatividad. Ruanas y prendas de alta calidad hechas por campesinos de la región. Calle 4 #5-52.</div>
@@ -1074,6 +1225,7 @@ footer{
   <h2>Gracias por estar aquí.</h2>
   <p>Esta es una casa hecha para la familia: para descansar, conversar, comer rico y crear recuerdos bonitos.</p>
   <div class="firma">Siempre serán bienvenidos.</div>
+  <div class="firma-personal">Con cariño,<br><span>Jorge &amp; Alexa</span></div>
 </section>
 
 <footer>— con cariño desde Iza, Boyacá —</footer>
