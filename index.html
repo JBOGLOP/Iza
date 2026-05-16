@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvenidos a nuestra casa · Iza, Boyacá</title>
+<meta name="description" content="Guía de bienvenida para nuestra casa en Iza, Boyacá. Apto 201 · Carrera 6 No. 3-88.">
+<meta property="og:title" content="Bienvenidos a nuestra casa · Iza, Boyacá">
+<meta property="og:description" content="Guía con recomendaciones, ruta y todo lo que necesitas para tu estadía en Iza.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+
+<style>
+/* ================================================
+   PALETA — AMANECERES DE PÁRAMO
+   Inspirada en el amanecer de Iza: cielos lavanda,
+   bruma color durazno, neblina crema sobre los cerros.
+   ================================================ */
+:root{
+  --cielo:#a8c4d8;          /* azul cielo de amanecer */
+  --cielo-suave:#cfdde8;
+  --lavanda:#b6a8c9;        /* lavanda de bruma */
+  --lavanda-suave:#d8cfe2;
+  --durazno:#e8b89a;        /* durazno suave */
+  --durazno-claro:#f4d4bc;
+  --crema:#fbf6ec;          /* neblina */
+  --crema-clara:#fdfaf3;
+  --crema-rosada:#f7ede0;
+  --tinta:#3a3142;          /* lavanda muy oscura para texto */
+  --tinta-suave:#6b5d72;
+  --linea:#e0d6c8;
+  --acento:#c97a52;         /* terracota acento */
+  --acento-suave:#d99573;
+  --musgo:#8a9b6e;          /* verde campo */
+  --musgo-claro:#b5c39e;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'Fraunces',Georgia,serif;
+  font-weight:400;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--tinta);
+  background:var(--crema);
+  background-image:
+    radial-gradient(ellipse at top, rgba(168,196,216,0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(232,184,154,0.18) 0%, transparent 45%),
+    radial-gradient(ellipse at 20% 70%, rgba(182,168,201,0.15) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='2' /%3E%3CfeColorMatrix values='0 0 0 0 0.6 0 0 0 0 0.5 0 0 0 0 0.55 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  min-height:100vh;
+}
+
+.contenedor{
+  max-width:780px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+/* === HERO con gradiente de amanecer === */
+.hero{
+  padding:90px 24px 70px;
+  text-align:center;
+  position:relative;
+  background:linear-gradient(180deg,
+    rgba(168,196,216,0.35) 0%,
+    rgba(216,207,226,0.25) 35%,
+    rgba(244,212,188,0.20) 65%,
+    transparent 100%);
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  top:40px;left:50%;
+  transform:translateX(-50%);
+  width:80px;height:1px;
+  background:var(--acento);
+  opacity:0.6;
+}
+
+.hero .saludo{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:1.05rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--acento);
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:clamp(2.6rem,7vw,4.6rem);
+  line-height:1.05;
+  letter-spacing:-0.01em;
+  color:var(--tinta);
+  margin-bottom:24px;
+}
+
+.hero h1 em{
+  font-style:italic;
+  color:var(--acento);
+  font-weight:400;
+}
+
+.hero .subtitulo{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:1.15rem;
+  color:var(--tinta-suave);
+  max-width:520px;
+  margin:0 auto 36px;
+}
+
+.hero .info-casa{
+  display:inline-block;
+  padding:22px 36px;
+  background:var(--crema-clara);
+  border:1px solid var(--linea);
+  border-radius:3px;
+  box-shadow:0 1px 0 rgba(201,122,82,0.06), 0 12px 32px -16px rgba(58,49,66,0.18);
+  position:relative;
+}
+
+.hero .info-casa::before,
+.hero .info-casa::after{
+  content:"";
+  position:absolute;
+  width:24px;height:1px;
+  background:var(--acento);
+  opacity:0.4;
+  top:50%;
+}
+.hero .info-casa::before{left:-32px}
+.hero .info-casa::after{right:-32px}
+
+.hero .info-casa .apto{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.9rem;
+  font-weight:600;
+  color:var(--acento);
+  letter-spacing:0.06em;
+  display:block;
+  margin-bottom:4px;
+}
+
+.hero .info-casa .direccion{
+  font-size:0.95rem;
+  color:var(--tinta-suave);
+  letter-spacing:0.02em;
+}
+
+/* === DIVISOR ORNAMENTAL === */
+.divisor{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  margin:50px 0;
+  color:var(--acento);
+}
+.divisor::before,.divisor::after{
+  content:"";
+  flex:1;
+  max-width:80px;
+  height:1px;
+  background:var(--linea);
+}
+.divisor svg{width:16px;height:16px;opacity:0.7}
+
+/* === SECCIONES === */
+.seccion{
+  margin-bottom:36px;
+}
+
+.seccion-titulo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.1rem;
+  font-weight:500;
+  color:var(--tinta);
+  margin-bottom:18px;
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+}
+
+.seccion-titulo .num{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:0.85rem;
+  font-weight:400;
+  color:var(--acento);
+  letter-spacing:0.18em;
+}
+
+/* === TARJETA PLEGABLE === */
+.tarjeta{
+  background:var(--crema-clara);
+  border:1px solid var(--linea);
+  border-radius:4px;
+  margin-bottom:14px;
+  overflow:hidden;
+  transition:all 0.25s ease;
+}
+
+.tarjeta:hover{
+  border-color:var(--acento-suave);
+  box-shadow:0 6px 20px -12px rgba(58,49,66,0.15);
+}
+
+details{width:100%}
+
+summary{
+  list-style:none;
+  cursor:pointer;
+  padding:20px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  user-select:none;
+  transition:background 0.2s ease;
+}
+
+summary::-webkit-details-marker{display:none}
+
+summary:hover{
+  background:rgba(168,196,216,0.08);
+}
+
+.summary-titulo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.4rem;
+  font-weight:600;
+  color:var(--tinta);
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex:1;
+}
+
+.summary-icono{
+  width:38px;
+  height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--cielo-suave);
+  border:1px solid var(--cielo);
+  border-radius:50%;
+  flex-shrink:0;
+  color:var(--tinta);
+}
+
+.summary-icono svg{width:18px;height:18px;stroke-width:1.6}
+
+.tarjeta--durazno .summary-icono{background:var(--durazno-claro); border-color:var(--durazno)}
+.tarjeta--lavanda .summary-icono{background:var(--lavanda-suave); border-color:var(--lavanda)}
+.tarjeta--musgo .summary-icono{background:var(--musgo-claro); border-color:var(--musgo)}
+
+.summary-flecha{
+  color:var(--acento);
+  transition:transform 0.3s ease;
+  flex-shrink:0;
+}
+
+details[open] .summary-flecha{
+  transform:rotate(180deg);
+}
+
+.tarjeta-contenido{
+  padding:0 24px 24px 24px;
+  border-top:1px dashed var(--linea);
+  padding-top:18px;
+  margin-top:0;
+  animation:fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(-4px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
+.tarjeta-contenido p{
+  margin-bottom:12px;
+  color:var(--tinta-suave);
+}
+
+.tarjeta-contenido p:last-child{margin-bottom:0}
+
+.tarjeta-contenido strong{
+  color:var(--tinta);
+  font-weight:600;
+}
+
+.tarjeta-contenido ul{
+  list-style:none;
+  margin:10px 0;
+}
+
+.tarjeta-contenido li{
+  padding:6px 0 6px 22px;
+  position:relative;
+  color:var(--tinta-suave);
+}
+
+.tarjeta-contenido li::before{
+  content:"";
+  position:absolute;
+  left:8px; top:14px;
+  width:6px; height:6px;
+  border-radius:50%;
+  background:var(--durazno);
+}
+
+/* === BLOQUE WIFI === */
+.wifi-card{
+  background:linear-gradient(135deg, var(--cielo-suave), var(--crema-clara));
+  border:1px solid var(--cielo);
+  border-radius:4px;
+  padding:24px;
+  margin-top:14px;
+  position:relative;
+}
+
+.wifi-card::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;
+  width:4px;height:100%;
+  background:var(--acento);
+  opacity:0.5;
+}
+
+.wifi-fila{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 0;
+  border-bottom:1px dashed var(--linea);
+  gap:12px;
+}
+
+.wifi-fila:last-child{border-bottom:none}
+
+.wifi-label{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:1.05rem;
+  color:var(--tinta);
+  letter-spacing:0.05em;
+}
+
+.wifi-valor{
+  font-family:'Courier New',monospace;
+  font-size:0.95rem;
+  font-weight:600;
+  color:var(--tinta);
+  background:var(--crema-clara);
+  padding:7px 14px;
+  border-radius:2px;
+  border:1px solid var(--linea);
+  cursor:pointer;
+  transition:all 0.2s ease;
+  user-select:all;
+}
+
+.wifi-valor:hover{
+  background:var(--acento);
+  color:white;
+  border-color:var(--acento);
+}
+
+.wifi-valor.copiado{
+  background:var(--musgo);
+  color:white;
+  border-color:var(--musgo);
+}
+
+/* === ALERTA ALARMA === */
+.alerta-alarma{
+  background:linear-gradient(135deg, var(--durazno-claro), var(--crema-rosada));
+  border:1px solid var(--durazno);
+  border-radius:4px;
+  padding:22px 24px;
+  margin-bottom:14px;
+  position:relative;
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+}
+
+.alerta-alarma .icono-alarma{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:var(--crema-clara);
+  border:1px solid var(--acento);
+  color:var(--acento);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.alerta-alarma .icono-alarma svg{width:22px;height:22px}
+
+.alerta-alarma .contenido h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.4rem;
+  font-weight:600;
+  color:var(--tinta);
+  margin-bottom:6px;
+}
+
+.alerta-alarma .contenido p{
+  color:var(--tinta-suave);
+  font-size:0.97rem;
+}
+
+/* === RECOMENDACIONES === */
+.recomendacion{
+  display:flex;
+  gap:16px;
+  padding:18px 0;
+  border-bottom:1px dashed var(--linea);
+  align-items:flex-start;
+}
+
+.recomendacion:last-child{border-bottom:none}
+
+.recomendacion .marker{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:var(--crema-clara);
+  border:1px solid var(--acento);
+  color:var(--acento);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  font-size:1rem;
+  flex-shrink:0;
+}
+
+.recomendacion .info{
+  flex:1;
+}
+
+.recomendacion .nombre{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.25rem;
+  font-weight:600;
+  color:var(--tinta);
+  margin-bottom:4px;
+  display:block;
+}
+
+.recomendacion .descripcion{
+  font-size:0.95rem;
+  color:var(--tinta-suave);
+  margin-bottom:8px;
+  line-height:1.55;
+}
+
+.recomendacion .meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 14px;
+  font-size:0.8rem;
+  color:var(--musgo);
+  font-style:italic;
+  margin-bottom:10px;
+}
+
+.recomendacion .meta .alerta{
+  color:var(--acento);
+  font-weight:500;
+  font-style:normal;
+}
+
+.recomendacion .acciones{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.btn-mapa{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:0.85rem;
+  font-family:'Fraunces',serif;
+  color:var(--crema-clara);
+  background:var(--acento);
+  text-decoration:none;
+  padding:7px 14px;
+  border-radius:3px;
+  border:1px solid var(--acento);
+  transition:all 0.2s ease;
+}
+
+.btn-mapa:hover{
+  background:var(--tinta);
+  border-color:var(--tinta);
+  transform:translateY(-1px);
+}
+
+.btn-mapa svg{width:13px;height:13px}
+
+.btn-mapa--casa{
+  background:var(--musgo);
+  border-color:var(--musgo);
+}
+.btn-mapa--casa:hover{
+  background:var(--tinta);
+  border-color:var(--tinta);
+}
+
+/* === SUBSECCIÓN === */
+.subseccion{
+  margin:28px 0 14px;
+}
+
+.subseccion-titulo{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:1.45rem;
+  color:var(--acento);
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:8px;
+}
+
+.subseccion-titulo::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:var(--linea);
+}
+
+/* === CASA DESTACADA === */
+.casa-destacada{
+  background:linear-gradient(135deg, var(--lavanda-suave), var(--crema-rosada));
+  border:1px solid var(--lavanda);
+  border-radius:4px;
+  padding:24px;
+  margin-top:18px;
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+
+.casa-destacada .estrella{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:var(--acento);
+  color:var(--crema-clara);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.4rem;
+  flex-shrink:0;
+}
+
+.casa-destacada .info{flex:1}
+
+.casa-destacada .titulo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;
+  font-weight:600;
+  color:var(--tinta);
+  margin-bottom:4px;
+}
+
+.casa-destacada .dir{
+  color:var(--tinta-suave);
+  font-size:0.95rem;
+  margin-bottom:10px;
+}
+
+/* === MENSAJE FINAL === */
+.cierre{
+  margin:60px 0 0;
+  padding:60px 30px 70px;
+  text-align:center;
+  background:linear-gradient(180deg,
+    transparent 0%,
+    rgba(216,207,226,0.25) 30%,
+    rgba(244,212,188,0.22) 70%,
+    rgba(168,196,216,0.20) 100%);
+  border-top:1px solid var(--linea);
+}
+
+.cierre h2{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(1.9rem,5vw,2.6rem);
+  color:var(--tinta);
+  margin-bottom:22px;
+  line-height:1.2;
+}
+
+.cierre p{
+  font-style:italic;
+  font-size:1.05rem;
+  color:var(--tinta-suave);
+  max-width:480px;
+  margin:0 auto 16px;
+}
+
+.cierre .firma{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;
+  font-style:italic;
+  color:var(--acento);
+  letter-spacing:0.05em;
+  margin-top:28px;
+}
+
+footer{
+  text-align:center;
+  padding:30px 24px 50px;
+  font-size:0.8rem;
+  color:var(--tinta-suave);
+  letter-spacing:0.12em;
+  font-style:italic;
+  background:var(--crema);
+}
+
+/* === RESPONSIVE === */
+@media (max-width:640px){
+  body{font-size:16px}
+  .hero{padding:60px 16px 50px}
+  .contenedor{padding:0 16px}
+  .seccion-titulo{font-size:1.75rem}
+  summary{padding:16px 18px}
+  .summary-titulo{font-size:1.2rem}
+  .tarjeta-contenido{padding:0 18px 20px;padding-top:14px}
+  .wifi-card{padding:18px}
+  .wifi-fila{flex-direction:column;align-items:flex-start;gap:6px}
+  .wifi-valor{width:100%}
+  .casa-destacada{flex-direction:column;text-align:center;align-items:center}
+  .cierre{padding:50px 20px}
+  .hero .info-casa::before, .hero .info-casa::after{display:none}
+  .alerta-alarma{padding:18px}
+}
+
+/* === ANIMACIÓN ENTRADA === */
+.fade-in{
+  animation:slideUp 0.7s ease backwards;
+}
+
+@keyframes slideUp{
+  from{opacity:0; transform:translateY(20px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
+.fade-in:nth-child(1){animation-delay:0.05s}
+.fade-in:nth-child(2){animation-delay:0.15s}
+.fade-in:nth-child(3){animation-delay:0.25s}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero fade-in">
+  <div class="saludo">— Iza · Boyacá —</div>
+  <h1>Bienvenidos a <em>nuestra casa</em></h1>
+  <p class="subtitulo">Un espacio hecho con cariño, para compartir en familia, descansar y crear recuerdos bonitos.</p>
+  <div class="info-casa">
+    <span class="apto">Apto 201</span>
+    <span class="direccion">Carrera 6 No. 3-88 · cerca al Hotel Casitas Barró</span>
+  </div>
+</header>
+
+<main class="contenedor">
+
+  <div class="divisor">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+  </div>
+
+  <!-- WIFI -->
+  <section class="seccion fade-in">
+    <h2 class="seccion-titulo"><span class="num">I.</span>Internet</h2>
+    <div class="wifi-card">
+      <div class="wifi-fila">
+        <span class="wifi-label">Red</span>
+        <span class="wifi-valor" onclick="copiar(this)">Ottis internet</span>
+      </div>
+      <div class="wifi-fila">
+        <span class="wifi-label">Contraseña</span>
+        <span class="wifi-valor" onclick="copiar(this)">0tt15$2525</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALARMA — destacada -->
+  <section class="seccion">
+    <h2 class="seccion-titulo"><span class="num">II.</span>Alarma</h2>
+    <div class="alerta-alarma">
+      <div class="icono-alarma">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M12 2a7 7 0 00-7 7v4l-2 3h18l-2-3V9a7 7 0 00-7-7z"/>
+          <path d="M10 21a2 2 0 004 0"/>
+        </svg>
+      </div>
+      <div class="contenido">
+        <h3>Por favor avísennos al llegar y al salir</h3>
+        <p>Cuando estén <strong>llegando a la casa</strong>, escríbannos para <strong>desactivar la alarma</strong>. Y al salir al final del viaje, también nos avisan para volverla a activar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE LA CASA -->
+  <section class="seccion">
+    <h2 class="seccion-titulo"><span class="num">III.</span>Sobre la casa</h2>
+
+    <div class="tarjeta">
+      <details>
+        <summary>
+          <span class="summary-titulo">
+            <span class="summary-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></span>
+            Cocina y mercado
+          </span>
+          <svg class="summary-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="tarjeta-contenido">
+          <p>Pueden usar con confianza el mercado que encuentren en la nevera y las alacenas. Siéntanse como en casa.</p>
+          <p>Si necesitan elementos de aseo, los encuentran en los baños o en los <strong>cajones interiores de la cocina</strong> (lado en L).</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="tarjeta tarjeta--lavanda">
+      <details>
+        <summary>
+          <span class="summary-titulo">
+            <span class="summary-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+            Toallas, ropa de cama y juegos
+          </span>
+          <svg class="summary-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="tarjeta-contenido">
+          <p>En el <strong>clóset de la habitación auxiliar</strong> encontrarán:</p>
+          <ul>
+            <li>Toallas</li>
+            <li>Ropa de cama</li>
+          </ul>
+          <p>También encontrarán <strong>juegos y algunas cosas para entretenerse</strong>.</p>
+          <p>Si desean cambiar las sábanas, pueden usar las que encuentran en el clóset auxiliar. Al salir, simplemente <strong>dejen puestas las que usaron</strong>; no se preocupen por lavarlas, nosotros lo hacemos cuando regresemos.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="tarjeta tarjeta--durazno">
+      <details>
+        <summary>
+          <span class="summary-titulo">
+            <span class="summary-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="5" r="0.5" fill="currentColor"/></svg></span>
+            Lavadora y ropa
+          </span>
+          <svg class="summary-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="tarjeta-contenido">
+          <p>Pueden usar la lavadora del apartamento y colgar la ropa en el <strong>tendedero del primer piso</strong>.</p>
+          <p><em>Recomendación piscina:</em> usen preferiblemente toallas viejitas y, si pueden, laven aparte la ropa usada en piscina, porque suele quedar con olor fuerte o mancharse un poco por el cloro.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="tarjeta">
+      <details>
+        <summary>
+          <span class="summary-titulo">
+            <span class="summary-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M8 22h8M12 18v4"/></svg></span>
+            Entretenimiento
+          </span>
+          <svg class="summary-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="tarjeta-contenido">
+          <p>Pueden usar los televisores y el <strong>Alexa</strong>. Todo está conectado a internet y a plataformas de video para que disfruten y descansen.</p>
+          <ul>
+            <li>En el clóset auxiliar hay <strong>juegos</strong> para compartir en familia</li>
+            <li>En la sala encontrarán <strong>libros</strong> para leer y relajarse</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <div class="tarjeta tarjeta--musgo">
+      <details open>
+        <summary>
+          <span class="summary-titulo">
+            <span class="summary-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22V10M12 10c0-4 3-7 7-7-1 5-3 7-7 7zM12 10c0-4-3-7-7-7 1 5 3 7 7 7z"/></svg></span>
+            Nuestras plantas
+          </span>
+          <svg class="summary-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="tarjeta-contenido">
+          <p>Amamos mucho las plantas de la casa.</p>
+          <p>Si pueden <strong>ponerles un poquito de agua</strong> a las plantas internas y del balcón durante su estadía, ellas y nosotros se los agradeceremos muchísimo.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="tarjeta tarjeta--lavanda">
+      <details>
+        <summary>
+          <span class="summary-titulo">
+            <span class="summary-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 8c0-3 2-5 7-5s7 2 7 5v8c0 3-2 5-7 5s-7-2-7-5V8z"/><path d="M5 12h14"/></svg></span>
+            Para el frío y la lluvia
+          </span>
+          <svg class="summary-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="tarjeta-contenido">
+          <p>Iza suele ser <strong>fresquito</strong>. Si necesitan:</p>
+          <ul>
+            <li>Las <strong>ruanas</strong> están disponibles para ustedes</li>
+            <li>Hay <strong>paraguas</strong> en el primer piso y encima de la nevera</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <div class="tarjeta tarjeta--durazno">
+      <details>
+        <summary>
+          <span class="summary-titulo">
+            <span class="summary-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18M8 6V4a1 1 0 011-1h6a1 1 0 011 1v2M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/></svg></span>
+            Manejo de basuras
+          </span>
+          <svg class="summary-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="tarjeta-contenido">
+          <p><strong>Basura normal:</strong> por favor sacarla en bolsas pequeñas y depositarla en las canecas del parque.</p>
+          <p><strong>Residuos orgánicos</strong> (cáscaras, restos de comida, café…): déjenlos en la caneca roja trasera del primer piso y revuélvanlos un poco con la pala.</p>
+          <p><strong>Reciclaje:</strong></p>
+          <ul>
+            <li>Enjuagar envases cuando sea necesario</li>
+            <li>Dejar reciclables en la caneca grande de la cocina</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <div class="divisor">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+  </div>
+
+  <!-- RECOMENDACIONES IZA -->
+  <section class="seccion">
+    <h2 class="seccion-titulo"><span class="num">IV.</span>Para disfrutar Iza</h2>
+    <p style="color:var(--tinta-suave); margin-bottom:6px; font-style:italic;">Nuestros lugares favoritos en el pueblo y alrededores.</p>
+
+    <!-- DESAYUNOS -->
+    <div class="subseccion">
+      <div class="subseccion-titulo">Desayunos</div>
+      <div class="recomendacion">
+        <div class="marker">A</div>
+        <div class="info">
+          <span class="nombre">Las Acacias</span>
+          <div class="descripcion">Muy rico para desayunar típico boyacense, calentito y casero. Calle 4 #4-71, Iza.</div>
+          <div class="meta">
+            <span>★ 4.1 · 204 reseñas</span>
+            <span>Mar–Vie 10 AM – 8 PM · Sáb–Dom 8 AM – 9 PM</span>
+            <span class="alerta">⚠ Cierra los lunes</span>
+          </div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Las+Acacias+Iza+Boyac%C3%A1&query_place_id=ChIJ0Vbq3m9bao4RmrS4pzzSk1k" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALMUERZOS -->
+    <div class="subseccion">
+      <div class="subseccion-titulo">Almuerzos y comidas</div>
+
+      <div class="recomendacion">
+        <div class="marker">B</div>
+        <div class="info">
+          <span class="nombre">Chicoral</span>
+          <div class="descripcion">Comida tradicional muy buena, carnes a la llanera. Km 3 vía Sogamoso–Iza.</div>
+          <div class="meta">
+            <span>★ 4.5 · 82 reseñas</span>
+            <span class="alerta">⚠ Solo sábados y domingos · 10 AM – 4 PM</span>
+          </div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://maps.app.goo.gl/y81xDs8TDHptfqj7A" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recomendacion">
+        <div class="marker">C</div>
+        <div class="info">
+          <span class="nombre">Santo Grill</span>
+          <div class="descripcion">Excelente opción para carnes y algo más especial. Sogamoso, entrando por Tibasosa.</div>
+          <div class="meta">
+            <span>★ 4.5 · 51 reseñas</span>
+            <span class="alerta">Solo cena · cierra domingos</span>
+          </div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://maps.app.goo.gl/G7x6AnZrfQtWtyiR9" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recomendacion">
+        <div class="marker">D</div>
+        <div class="info">
+          <span class="nombre">Pizzas y pastas — Sabor & Arte</span>
+          <div class="descripcion">Vía Iza–Sogamoso, km 6. Muy recomendado para una comida tranquila y rica en la noche.</div>
+          <div class="meta">
+            <span>★ 4.4 · 556 reseñas</span>
+            <span class="alerta">⚠ Cierra lunes a miércoles</span>
+          </div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://maps.app.goo.gl/Mse2qYJqP5DmQetY6" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recomendacion">
+        <div class="marker">+</div>
+        <div class="info">
+          <span class="nombre">La Postrería</span>
+          <div class="descripcion">Carnes, postres y opciones más gourmet. Km 3 vía Sogamoso–Iza.</div>
+          <div class="meta">
+            <span>★ 4.4 · 963 reseñas</span>
+            <span>Todos los días · 11 AM – 8:30 PM</span>
+          </div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://maps.app.goo.gl/zWUjA7hjba8vTPYy7" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- POSTRES -->
+    <div class="subseccion">
+      <div class="subseccion-titulo">Postres y antojos</div>
+
+      <div class="recomendacion">
+        <div class="marker">E</div>
+        <div class="info">
+          <span class="nombre">La Minerva</span>
+          <div class="descripcion">En la esquina de la casa (Carrera 6 #3-40). Perfectos para algo dulce, muy cerquita.</div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://www.google.com/maps/search/?api=1&query=La+Minerva+Iza+Boyac%C3%A1&query_place_id=ChIJy--EPwBbao4RTQNIA_eHxwM" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recomendacion">
+        <div class="marker">F</div>
+        <div class="info">
+          <span class="nombre">Doña Rosita de Iza</span>
+          <div class="descripcion">Muy tradicional y delicioso. Postres y café, famosa por sus merengones y aromáticas con frutas frescas. Calle 4ª #4A-51.</div>
+          <div class="meta">
+            <span>★ 4.4 · 55 reseñas</span>
+            <span>Lun–Vie 9 AM – 5 PM · Sáb–Dom 9 AM – 8 PM</span>
+          </div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://www.google.com/maps/search/?api=1&query=Las+Delicias+de+Rosita+Iza&query_place_id=ChIJEQTM_AFbao4RkuKd4nvPVfI" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERMALES -->
+    <div class="subseccion">
+      <div class="subseccion-titulo">Plan de termales</div>
+
+      <div class="recomendacion">
+        <div class="marker">G</div>
+        <div class="info">
+          <span class="nombre">Piscinas Erika</span>
+          <div class="descripcion">Complejo termal en Iza. Muy recomendado para relajarse y disfrutar el clima boyacense.</div>
+          <div class="meta">
+            <span>★ 4.0 · 684 reseñas</span>
+            <span>Mar–Sáb 5:30 AM – 9 PM · Dom 5:30 AM – 4:30 PM</span>
+          </div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://www.google.com/maps/search/?api=1&query=Complejo+Hotelero+Termal+Erika+Iza&query_place_id=ChIJWYvyoWpbao4RUuBCxqDkgtc" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recomendacion">
+        <div class="marker">H</div>
+        <div class="info">
+          <span class="nombre">El Batán</span>
+          <div class="descripcion">Termales en Cuítiva, muy cerca de Iza. Aguas tibias relajantes en un entorno tranquilo. También tienen turcos.</div>
+          <div class="meta">
+            <span>★ 4.4 · 1.316 reseñas</span>
+            <span>Todos los días 9 AM – 6 PM</span>
+          </div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://www.google.com/maps/search/?api=1&query=Hotel+Termales+El+Bat%C3%A1n+Cu%C3%ADtiva&query_place_id=ChIJ4Xo2prhbao4Rp6NToTF7PcI" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARTESANÍAS -->
+    <div class="subseccion">
+      <div class="subseccion-titulo">Artesanías y tejidos</div>
+
+      <div class="recomendacion">
+        <div class="marker">I</div>
+        <div class="info">
+          <span class="nombre">Rueca Izana</span>
+          <div class="descripcion">Pregunten por <strong>Ruth</strong>. Tejidos tradicionales hechos a mano, perfectos para llevar recuerdos lindos de Boyacá.</div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://www.google.com/maps/search/?api=1&query=Rueca+Izana+Iza+Boyac%C3%A1" target="_blank" rel="noopener">Buscar en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recomendacion">
+        <div class="marker">J</div>
+        <div class="info">
+          <span class="nombre">Tejidos Rebancá</span>
+          <div class="descripcion">Diseño, tradición y mucha creatividad. Ruanas y prendas de alta calidad hechas por campesinos de la región. Calle 4 #5-52.</div>
+          <div class="meta">
+            <span>★ 4.5 · 22 reseñas</span>
+            <span>Lun–Sáb 9 AM – 5 PM · Dom 11 AM – 5 PM</span>
+          </div>
+          <div class="acciones">
+            <a class="btn-mapa" href="https://www.google.com/maps/search/?api=1&query=Tejidos+Rebanc%C3%A1+Iza&query_place_id=ChIJ5ZH8Kntbao4RRB6_uqwJcEk" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LA CASA -->
+    <div class="casa-destacada">
+      <div class="estrella">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      </div>
+      <div class="info">
+        <div class="titulo">Nuestra casa — Apto 201</div>
+        <div class="dir">Carrera 6 No. 3-88, Iza · cerca al Hotel Casitas Barró</div>
+        <div class="acciones">
+          <a class="btn-mapa btn-mapa--casa" href="https://maps.app.goo.gl/dSNWL12cbJPv9Ti38" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- CIERRE -->
+<section class="cierre">
+  <h2>Gracias por estar aquí.</h2>
+  <p>Esta es una casa hecha para la familia: para descansar, conversar, comer rico y crear recuerdos bonitos.</p>
+  <div class="firma">Siempre serán bienvenidos.</div>
+</section>
+
+<footer>— con cariño desde Iza, Boyacá —</footer>
+
+<script>
+function copiar(el){
+  const txt = el.textContent;
+  navigator.clipboard.writeText(txt).then(()=>{
+    const original = el.textContent;
+    el.classList.add('copiado');
+    el.textContent = '✓ Copiado';
+    setTimeout(()=>{
+      el.classList.remove('copiado');
+      el.textContent = original;
+    },1400);
+  }).catch(()=>{
+    const r = document.createRange();
+    r.selectNode(el);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(r);
+  });
+}
+</script>
+
+</body>
+</html>
